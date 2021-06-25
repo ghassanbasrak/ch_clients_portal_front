@@ -16,7 +16,9 @@
     </section>
 
 
+<?php if($group == 'invoices') echo view('admin/invoices/modal') ?>
 <?php echo view('admin/layout/footer'); ?>
 
+<?php if($group == 'invoices') echo view('admin/invoices/script') ?>
 
 <?php echo view('admin/layout/tail'); ?>

@@ -1,3 +1,15 @@
+
+<?php
+
+$session = \Config\Services::session();
+    $role = $session->get('role');
+    $tabs = [];
+    if($role == 'manager') {
+        ?>
+<button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#addInvoice">
+    Add New Invoice
+</button>
+<?php } ?>
 <table class="table">
     <thead>
     <tr>

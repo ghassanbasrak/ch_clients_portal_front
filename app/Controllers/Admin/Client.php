@@ -56,6 +56,9 @@ class Client extends BaseController
         $group = $this->request->getVar('group');
         if($group == 'invoices'){
             $data['invoices'] = get_client_invoices($id);
+            $data['clients'] = get_clients();
+            $data['services'] = get_services();
+            $data['title'] = 'Invoices';
         }
         $data['client'] = get_client($id);
         $data['group'] = $group;
